@@ -9,7 +9,13 @@ const questions = () => {
         {
             type: "input",
             name: "name",
-            message: "What is your middle name?"
+            message: "What is the title of your project?"
+        },
+        {
+            type: "input",
+            name: "tool",
+            message: "What tool is being used to make this command-line app?"
+
         }
     ])    
 }
