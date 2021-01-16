@@ -8,28 +8,42 @@ const questions = () => {
     return inquirer.prompt ([
         {
             type: "input",
-            name: "name",
+            title: "name",
             message: "What is the title of your project?"
         },
         {
             type: "input",
-            name: "tool",
+            tool: "tool",
             message: "What tool is being used to make this command-line app?"
-
         }
     ])    
 }
 
 // TODO: Create a function to write README file
 const writeToFile = (data) => {
-
+    return `<!Doctype html>
+    <html lang="en">
+      <head>
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+        <title>Home</title>
+      </head>
+      <body>
+        <div class="container">
+            
+    
+      </body>
+    </html>`
 }
 
 // TODO: Create a function to initialize app
 const init = async () => {
 
-    const data = await questions();
-    console.log(data);
+    const md = writeToFile(await questions());
 
 }
 
