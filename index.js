@@ -46,6 +46,7 @@ const writeToFile = (data) => {
 }
 
 // TODO: Create a function to initialize app
+
 const init = async () => {
 
     const md = writeToFile(await questions());
