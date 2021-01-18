@@ -13,8 +13,13 @@ const questions = () => {
         },
         {
             type: "input",
-            tool: "tool",
+            title: "tool",
             message: "What tool is being used to make this command-line app?"
+        },
+        {
+          type: "input",
+          title: "time",
+          message: "How long did it take me to make this command-line app?"
         }
     ])    
 }
