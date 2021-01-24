@@ -2,23 +2,24 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt ([
         {
             type: "input",
-            title: "name",
+            name: "name",
             message: "What is the title of your project?"
         },
         {
             type: "input",
-            title: "tool",
+            name: "tool",
             message: "What tool is being used to make this command-line app?"
         },
         {
           type: "input",
-          title: "time",
+          name: "time",
           message: "How long did it take me to make this command-line app?"
         }
     ])    
@@ -26,38 +27,19 @@ const questions = () => {
 
 // TODO: Create a function to write README file
 const writeToFile = (data) => {
-    return `<!Doctype html>
-    <html lang="en">
-      <head>
-    
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    
-        <title>Home</title>
-      </head>
-      <body>
+  //fs.writeFileSync()
 
-        <div class="container">
+  console.log(data);
 
-          
-
-        </div>
-            
-      </body>
-    </html>`
 }
 
 // TODO: Create a function to initialize app
 
-function init () {
-
-  const background = async () => {
+async function init () {
 
     const md = writeToFile(await questions());
 
-  }
+
 }
 
 // Function call to initialize app
