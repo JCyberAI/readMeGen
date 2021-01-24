@@ -38,19 +38,26 @@ const writeToFile = (data) => {
         <title>Home</title>
       </head>
       <body>
+
         <div class="container">
+
+          
+
+        </div>
             
-    
       </body>
     </html>`
 }
 
 // TODO: Create a function to initialize app
 
-const init = async () => {
+function init () {
+
+  const background = async () => {
 
     const md = writeToFile(await questions());
 
+  }
 }
 
 // Function call to initialize app
