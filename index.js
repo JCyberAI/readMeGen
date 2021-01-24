@@ -27,9 +27,12 @@ const questions = () => {
 
 // TODO: Create a function to write README file
 const writeToFile = (data) => {
-  //fs.writeFileSync()
 
   console.log(data);
+  const markdown = generateMarkdown(data);
+  console.log(markdown);
+  fs.writeFileSync("SampleMarkdown.md", markdown);
+  
 
 }
 
